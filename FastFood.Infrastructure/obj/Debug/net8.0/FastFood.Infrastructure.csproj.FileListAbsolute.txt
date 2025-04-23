@@ -1,0 +1,11 @@
+C:\Repos\FastFood\FastFood.Infrastructure\bin\Debug\net8.0\FastFood.Infrastructure.deps.json
+C:\Repos\FastFood\FastFood.Infrastructure\bin\Debug\net8.0\FastFood.Infrastructure.dll
+C:\Repos\FastFood\FastFood.Infrastructure\bin\Debug\net8.0\FastFood.Infrastructure.pdb
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\FastFood.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\FastFood.Infrastructure.AssemblyInfoInputs.cache
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\FastFood.Infrastructure.AssemblyInfo.cs
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\FastFood.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\FastFood.Infrastructure.dll
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\refint\FastFood.Infrastructure.dll
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\FastFood.Infrastructure.pdb
+C:\Repos\FastFood\FastFood.Infrastructure\obj\Debug\net8.0\ref\FastFood.Infrastructure.dll

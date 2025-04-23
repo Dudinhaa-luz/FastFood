@@ -1,0 +1,11 @@
+C:\Repos\FastFood\FastFood.Domain\bin\Debug\net8.0\FastFood.Domain.deps.json
+C:\Repos\FastFood\FastFood.Domain\bin\Debug\net8.0\FastFood.Domain.dll
+C:\Repos\FastFood\FastFood.Domain\bin\Debug\net8.0\FastFood.Domain.pdb
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\FastFood.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\FastFood.Domain.AssemblyInfoInputs.cache
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\FastFood.Domain.AssemblyInfo.cs
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\FastFood.Domain.csproj.CoreCompileInputs.cache
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\FastFood.Domain.dll
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\refint\FastFood.Domain.dll
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\FastFood.Domain.pdb
+C:\Repos\FastFood\FastFood.Domain\obj\Debug\net8.0\ref\FastFood.Domain.dll
