@@ -11,7 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\FastFood.Application\FastFood.Application.csproj" />
+    <ProjectReference Include="..\FastFood.Domain\FastFood.Domain.csproj" />
   </ItemGroup>
 
 </Project>

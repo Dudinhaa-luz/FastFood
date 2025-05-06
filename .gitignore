@@ -2,4 +2,8 @@
 *.user
 *.suo
 *.vscode/
+**/bin/
+**/obj/
+**/out/
+**/publish/
 
