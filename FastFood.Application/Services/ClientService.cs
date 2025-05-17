@@ -8,9 +8,14 @@ namespace FastFood.Application.Services
     {
         private readonly IClientRepository _clientRepository;
 
+        public ClientService(IClientRepository clientRepository)
+        {
+            _clientRepository = clientRepository;
+        }
+
         public Task AddClient(Client client)
         {
-            throw new NotImplementedException();
+            return _clientRepository.AddClient(client);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using FastFood.Application.DTOs;
+﻿using AutoMapper;
+using FastFood.Application.DTOs;
 using FastFood.Application.Interfaces.Services;
 using FastFood.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
@@ -10,16 +11,19 @@ namespace FastFood.Api.Controllers
     public class ClientController : Controller
     {
         private readonly IClientService _clientService;
+        private readonly IMapper _mapper;
 
-        public ClientController(IClientService clientService)
+        public ClientController(IClientService clientService, IMapper mapper)
         {
             _clientService = clientService;
+            _mapper = mapper;
         }
 
         [HttpPost]
         public async Task<IActionResult> CreateClient([FromBody] CreateClientRequest request)
         {
-            await _clientService.AddClient(new Client());
+            var client = _mapper.Map<Client>(request);
+            await _clientService.AddClient(client);
 
             return Ok();
         }
