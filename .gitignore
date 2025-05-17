@@ -6,4 +6,16 @@
 **/obj/
 **/out/
 **/publish/
-
+*.tmp
+*.log
+*.ttf
+*.pdb
+.nuget/
+packages/
+*.nupkg
+project.lock.json
+.idea/
+*.sln.iml
+*.dockerignore
+docker-compose.override.yml
+msbuild.log
