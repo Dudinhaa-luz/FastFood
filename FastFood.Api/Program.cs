@@ -1,8 +1,11 @@
 using FastFood.Application.Interfaces.Services;
 using FastFood.Application.Mappings;
 using FastFood.Application.Services;
+using FastFood.Application.Validators;
 using FastFood.Domain.Interfaces.Repositories;
 using FastFood.Infrastructure.Repositories;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +17,8 @@ builder.Services.AddAutoMapper(typeof(ClientProfile));
 
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+
+builder.Services.AddValidatorsFromAssemblyContaining<CreateClientRequestValidator>();
 
 var app = builder.Build();
 
