@@ -21,7 +21,7 @@ namespace FastFood.Api.Controllers
         }
 
         [HttpPost]
-        [Route("/CreateClient")]
+        // [Route("/CreateClient")]
         public async Task<IActionResult> CreateClient([FromBody] CreateClientRequest request)
         {
             var validationResult = new CreateClientRequestValidator().Validate(request);
@@ -33,5 +33,13 @@ namespace FastFood.Api.Controllers
 
             return Ok();
         }
+
+        [HttpGet]
+        public async Task<IEnumerable<Client>> Get()
+        {
+            return await _clientService.GetAllClients();
+        }
+
+
     }
 }

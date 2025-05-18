@@ -17,5 +17,10 @@ namespace FastFood.Application.Services
         {
             return _clientRepository.AddClient(client);
         }
+
+        public Task<IEnumerable<Client>> GetAllClients()
+        {
+            return _clientRepository.GetAllClients();
+        }
     }
 }

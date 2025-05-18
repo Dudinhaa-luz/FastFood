@@ -5,5 +5,6 @@ namespace FastFood.Domain.Interfaces.Repositories
     public interface IClientRepository
     {
         Task AddClient(Client client);
+        Task<IEnumerable<Client>> GetAllClients();
     }
 }
