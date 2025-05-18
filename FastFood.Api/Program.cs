@@ -28,6 +28,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.MapGet("/teste", () => "ok");
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
