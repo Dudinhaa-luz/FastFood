@@ -11,13 +11,13 @@ services:
       - postgres
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__Default=Host=postgres;Database=mydb;Username=myuser;Password=mypassword
+      - ConnectionStrings__Default=Host=postgres;Database=fastfood;Username=myuser;Password=mypassword
 
   postgres:
     image: postgres:15
     restart: always
     environment:
-      POSTGRES_DB: mydb
+      POSTGRES_DB: fastfood
       POSTGRES_USER: myuser
       POSTGRES_PASSWORD: mypassword
     ports:
