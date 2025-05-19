@@ -1,3 +1,4 @@
+using FastFood.Api.Configurations;
 using FastFood.Application.Interfaces.Services;
 using FastFood.Application.Mappings;
 using FastFood.Application.Services;
@@ -20,10 +21,7 @@ builder.Services.AddAutoMapper(typeof(ClientProfile));
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
-builder.Services.AddScoped<IClientRepository, ClientRepository>();
-builder.Services.AddScoped<IClientService, ClientService>();
-
-
+builder.Services.AddDependencies();
 
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateClientRequestValidator>();
