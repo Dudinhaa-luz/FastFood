@@ -1,9 +1,5 @@
 ﻿using FastFood.Application;
-using FastFood.Application.Interfaces.Services;
-using FastFood.Application.Services;
-using FastFood.Domain.Interfaces.Repositories;
 using FastFood.Infrastructure;
-using FastFood.Infrastructure.Repositories;
 
 namespace FastFood.Api.Configurations
 {

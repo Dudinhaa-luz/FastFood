@@ -9,7 +9,7 @@ namespace FastFood.Infrastructure
 
         public DbSet<Client> Clients => Set<Client>();
         public DbSet<Product> Products => Set<Product>();
-
+        public DbSet<Order> Orders => Set<Order>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -28,11 +28,20 @@ namespace FastFood.Infrastructure
                 entity.ToTable("produtos");
                 entity.HasKey(p => p.Id);
                 entity.Property(p => p.Code).IsRequired();
-                entity.HasIndex(p => p.Code) .IsUnique();
+                entity.HasIndex(p => p.Code).IsUnique();
                 entity.Property(p => p.Name).IsRequired();
                 entity.Property(p => p.Description);
                 entity.Property(p => p.Price).IsRequired().HasColumnType("decimal(18,2)");
                 entity.Property(p => p.Category).IsRequired().HasConversion<int>();
+            });
+
+            modelBuilder.Entity<Order>(entity =>
+            {
+                entity.ToTable("pedidos");
+                entity.HasKey(p => p.Id);
+                entity.Property(p => p.Products).IsRequired();
+                entity.Property(p => p.Status).IsRequired().HasConversion<int>();
+                entity.Property(p => p.CreateDate).IsRequired();
             });
         }
     }

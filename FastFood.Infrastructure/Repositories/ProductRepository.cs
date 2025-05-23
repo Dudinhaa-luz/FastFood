@@ -1,4 +1,4 @@
-﻿using FastFood.Domain.Entities;
+﻿using FastFood.Domain.Enums;
 using FastFood.Domain.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 

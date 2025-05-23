@@ -1,17 +1,12 @@
-﻿using FastFood.Domain.Entities;
-using FastFood.Application.Interfaces.Services;
+﻿using FastFood.Application.Interfaces.Services;
+using FastFood.Domain.Entities;
 using FastFood.Domain.Interfaces.Repositories;
 
 namespace FastFood.Application.Services
 {
-    public class ClientService : IClientService
+    public class ClientService(IClientRepository clientRepository) : IClientService
     {
-        private readonly IClientRepository _clientRepository;
-
-        public ClientService(IClientRepository clientRepository)
-        {
-            _clientRepository = clientRepository;
-        }
+        private readonly IClientRepository _clientRepository = clientRepository;
 
         public Task AddClient(Client client)
         {

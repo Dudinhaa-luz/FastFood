@@ -21,7 +21,6 @@ namespace FastFood.Api.Controllers
         }
 
         [HttpPost]
-        // [Route("/CreateClient")]
         public async Task<IActionResult> CreateClient([FromBody] CreateClientRequest request)
         {
             var validationResult = new CreateClientRequestValidator().Validate(request);

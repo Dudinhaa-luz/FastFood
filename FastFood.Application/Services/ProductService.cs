@@ -1,5 +1,5 @@
 ﻿using FastFood.Application.Interfaces.Services;
-using FastFood.Domain.Entities;
+using FastFood.Domain.Enums;
 using FastFood.Domain.Interfaces.Repositories;
 
 namespace FastFood.Application.Services

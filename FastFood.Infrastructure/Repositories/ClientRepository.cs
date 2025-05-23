@@ -4,14 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FastFood.Infrastructure.Repositories
 {
-    public class ClientRepository : IClientRepository
+    public class ClientRepository(AppDbContext context) : IClientRepository
     {
-        private readonly AppDbContext _context;
-
-        public ClientRepository(AppDbContext context)
-        {
-            _context = context;
-        }
+        private readonly AppDbContext _context = context;
 
         public async Task AddClient(Client client)
         {
@@ -23,6 +18,5 @@ namespace FastFood.Infrastructure.Repositories
         {
             return await _context.Clients.ToListAsync();
         }
-
     }
 }

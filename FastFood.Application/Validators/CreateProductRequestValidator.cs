@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FastFood.Application.DTOs;
+﻿using FastFood.Application.DTOs;
 using FluentValidation;
 
 namespace FastFood.Application.Validators
 {
     public class CreateProductRequestValidator : AbstractValidator<CreateProductRequest>
     {
-        public CreateProductRequestValidator() 
-        { 
+        public CreateProductRequestValidator()
+        {
             RuleFor(p => p.Code)
                 .NotEmpty().WithMessage("O código do produto é obrigatório.")
                 .MinimumLength(3).WithMessage("O código deve ter pelo menos 3 caracteres.");

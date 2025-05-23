@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using FastFood.Application.DTOs;
 
 namespace FastFood.Application.Mappings
@@ -13,7 +8,7 @@ namespace FastFood.Application.Mappings
         public ProductProfile()
         {
             CreateMap<CreateProductRequest, Product>().
-                ForMember(dest => dest.Id, opt => opt.MapFrom(src => new Guid()));
+                ForMember(dest => dest.Id, opt => opt.MapFrom(src => Guid.NewGuid()));
 
             CreateMap<Product, ProductResponse>();
         }

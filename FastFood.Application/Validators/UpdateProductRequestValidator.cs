@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FastFood.Application.DTOs;
+﻿using FastFood.Application.DTOs;
 using FluentValidation;
 
 namespace FastFood.Application.Validators

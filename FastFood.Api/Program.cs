@@ -1,13 +1,8 @@
 using FastFood.Api.Configurations;
-using FastFood.Application.Interfaces.Services;
 using FastFood.Application.Mappings;
-using FastFood.Application.Services;
 using FastFood.Application.Validators;
-using FastFood.Domain.Interfaces.Repositories;
 using FastFood.Infrastructure;
-using FastFood.Infrastructure.Repositories;
 using FluentValidation;
-using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddAutoMapper(typeof(ClientProfile));
+builder.Services.AddAutoMapper(typeof(OrderProfile));
+builder.Services.AddAutoMapper(typeof(ProductProfile));
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));

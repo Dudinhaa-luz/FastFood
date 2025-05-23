@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using FastFood.Application.DTOs;
 using FastFood.Application.Interfaces.Services;
 using FastFood.Application.Validators;
@@ -20,10 +19,10 @@ namespace FastFood.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromBody]CreateProductRequest request)
+        public async Task<IActionResult> CreateProduct([FromBody] CreateProductRequest request)
         {
             var validationResult = new CreateProductRequestValidator().Validate(request);
-            if(!validationResult.IsValid)
+            if (!validationResult.IsValid)
                 return BadRequest(validationResult.Errors);
 
             var product = _mapper.Map<Product>(request);
@@ -56,11 +55,11 @@ namespace FastFood.Api.Controllers
 
             try
             {
-                Product? productExists  = await _productService.UpdateProduct(productToUpdate);
+                Product? productExists = await _productService.UpdateProduct(productToUpdate);
 
                 if (productExists is null)
                     return GetProductNotFoundMessage();
-                
+
             }
             catch (Exception ex)
             {
