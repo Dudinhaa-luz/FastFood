@@ -7,9 +7,12 @@ using FastFood.Domain.Entities;
 
 namespace FastFood.Domain.Interfaces.Repositories
 {
-    public interface IProductRepository : IRepository<Product>
+    public interface IProductRepository
     {
-        Task<Product?> GetByCodeAsync(string code);
-        Task<IEnumerable<Product>> SearchByNameAsync(string namePart);
+        Task<Product?> GetByIdAsync(Guid id);
+        Task<IEnumerable<Product>> GetAllProductsByCategoryAsync(EnumCategoryProduct categoryProduct);
+        Task AddProductAsync(Product product);
+        Task UpdateProductAsync(Product product);
+        Task DeleteAsync(Product product);
     }
 }

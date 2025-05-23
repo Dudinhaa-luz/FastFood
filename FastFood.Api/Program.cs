@@ -21,8 +21,10 @@ builder.Services.AddAutoMapper(typeof(ClientProfile));
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
-builder.Services.AddDependencies();
 
+#region DI
+DependencyInjection.AddDependencies(builder.Services);
+#endregion
 
 builder.Services.AddValidatorsFromAssemblyContaining<CreateClientRequestValidator>();
 

@@ -32,6 +32,7 @@ namespace FastFood.Infrastructure
                 entity.Property(p => p.Name).IsRequired();
                 entity.Property(p => p.Description);
                 entity.Property(p => p.Price).IsRequired().HasColumnType("decimal(18,2)");
+                entity.Property(p => p.Category).IsRequired().HasConversion<int>();
             });
         }
     }
